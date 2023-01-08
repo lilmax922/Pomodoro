@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap');
+
+// 設定變數
+$primary: #ffab91;
+$secondary: #fff4f5;
+$hoverColor: #ff7681;
+$hoverBg: rgba(238, 238, 238, 0.4);
+$textColor: #aaa;
+
+// img.toad(src="./images/toad.png")
+
+.v-application__wrap {
+  display: flex;
+  flex-direction: row;
+  color: $primary;
+  background: $secondary;
+  font-family: 'Grandstander', 'Noto Sans JP', sans-serif, cursive;
+
+  .v-table {
+    color: $textColor;
+  }
+
+  .v-btn:hover {
+    color: $hoverColor;
+    background: $hoverBg;
+  }
+}
+
+// POMODORO
+.v-app-bar-title {
+  writing-mode: vertical-lr;
+  flex: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar {
+  // width: 20% !important;
+  background: $primary;
+  color: white;
+  height: 100vh;
+  padding: 35px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .v-btn {
+    margin: 10px 0;
+  }
+}
+
+.mainBody {
+  width: 95% !important;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  background: url('./images/toad.png')no-repeat left/900px;
+}
+
+// HomeView
+#home {
+  h1:nth-child(odd) {
+    font-size: 75px;
+    filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.3)); 
+  }
+
+  h1:nth-child(even) {
+    font-size: 50px;
+  }
+
+  button {
+    display: flex;
+    margin: auto;
+    font-size: 50px;
+    padding: 40px;
+  }
+}
+
+// list
+#list {
+  th {
+    width: 50%;
+    font-size: 16px;
+  }
+
+  td:nth-child(odd) {
+    font-size: 16px;
+  }
+
+  td:nth-child(even) {
+    text-align: left;
+  }
+
+  .v-label {
+    color: #ff7145;
+  }
+
+  .v-input__append {
+    padding-top: 6px;
+    margin-left: 5px;
+  }
+}
+
+// settings
+#settings {
+
+  th {
+    width: 33.333%;
+    font-size: 16px;
+  }
+
+  td:nth-child(odd) {
+    font-size: 16px;
+  }
+
+  // 鈴聲選擇按鈕
+  .v-radio-group {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+#settings,
+#list {
+  h1 {
+    filter: drop-shadow(1px 1px rgba(0,0,0,0.3));
+  }  
+}
+
+@media (max-width: 992px) {
+  .mainBody {
+    width: 85% !important;
+  }
+}
+
+@media (max-width: 772px) {
+  .mainBody {
+    width: 90% !important;
+  }
+}
